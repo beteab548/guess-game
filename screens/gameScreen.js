@@ -10,19 +10,25 @@ export default function GameScreen() {
         autoCorrect={false}
         maxLength={2}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
+      <View style={style.buttonContainer}>
+        <View style={style.buttonContainer}>
+          <PrimaryButton>Reset</PrimaryButton>
+        </View>
+        <View style={style.buttonContainer}>
+          <PrimaryButton>Confirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 }
 const style = StyleSheet.create({
   container: {
     marginTop: "60",
-    backgroundColor: "purple",
+    backgroundColor: "#4e0329",
     marginHorizontal: 14,
     elevation: 6,
     borderRadius: 10,
-    alignItems:'center'
+    alignItems: "center",
   },
   numberInput: {
     color: "orange",
@@ -34,5 +40,12 @@ const style = StyleSheet.create({
     height: 50,
     fontWeight: "bold",
     borderBottomWidth: 2,
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  buttonContainer: {
+    flex: 1,
   },
 });

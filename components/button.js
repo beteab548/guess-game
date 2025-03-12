@@ -19,7 +19,6 @@ const style = StyleSheet.create({
   buttonOuterContainer: {
     overflow: "hidden",
     borderRadius: 28,
-    width: "80%",
     margin: 4,
   },
   buttonInnerContainer: {
