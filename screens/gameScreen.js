@@ -10,7 +10,7 @@ export default function GameScreen() {
         autoCorrect={false}
         maxLength={2}
       />
-      <View style={style.buttonContainer}>
+      <View style={style.buttonsContainer}>
         <View style={style.buttonContainer}>
           <PrimaryButton>Reset</PrimaryButton>
         </View>
@@ -37,7 +37,7 @@ const style = StyleSheet.create({
     width: 50,
     textAlign: "center",
     fontSize: 26,
-    height: 50,
+    height: 80,
     fontWeight: "bold",
     borderBottomWidth: 2,
   },
