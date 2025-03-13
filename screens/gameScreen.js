@@ -1,6 +1,12 @@
 import { TextInput, View, StyleSheet } from "react-native";
 import PrimaryButton from "../components/button";
+import { useState } from "react";
 export default function GameScreen() {
+  const [inputNumber, setInputNumber] = useState("");
+  function changeHandler(inputNumber) {
+    setInputNumber(inputNumber);
+  }
+  function handlePress() {}
   return (
     <View style={style.container}>
       <TextInput
@@ -9,13 +15,15 @@ export default function GameScreen() {
         autoCapitalize={false}
         autoCorrect={false}
         maxLength={2}
+        onChange={changeHandler}
+        value={inputNumber}
       />
       <View style={style.buttonsContainer}>
         <View style={style.buttonContainer}>
-          <PrimaryButton>Reset</PrimaryButton>
+          <PrimaryButton handlePress={handlePress}>Reset</PrimaryButton>
         </View>
         <View style={style.buttonContainer}>
-          <PrimaryButton>Confirm</PrimaryButton>
+          <PrimaryButton handlePress={handlePress}>Confirm</PrimaryButton>
         </View>
       </View>
     </View>
